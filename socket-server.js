@@ -5,8 +5,12 @@ var ot = require('ot');
 var roomList = {};
 
 module.exports = function(server) {
-  var str = 'This is a Markdown Heading \n\n' +
-            'var i = i + 1;';
+  var str = '// Please read instructions below  \n\n' +
+            '// 1. Send url link to your collaborator \n\n' +
+            '// 2. Send your userId to collaborator,\n\n ' +
+            '// then they can make video call by \n\n' +
+            '// enter your userId in the box which above \n\n' +
+            '// the chatbox';
 
   var io = socketIO(server);
   io.on('connection', function(socket) {
