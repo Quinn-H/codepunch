@@ -56,7 +56,7 @@
 
 <script src="/plugins/ot/ot.js"></script>
 <script src="/socket.io/socket.io.js"></script>
-<script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+<script src="https://evening-escarpment-69713.herokuapp.com/peer/peer.js"></script>
 
 </script>
 
@@ -120,7 +120,15 @@
   // Compatibility shim
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     // PeerJS object
-    var peer = new Peer(username + roomId, {key: '3sihuz8l2q6nipb9'});
+    var peer = new Peer(username + roomId, {
+      host: 'evening-escarpment-69713.herokuapp.com',
+      path: '/peerjs',
+      port: 443,
+      secure: true,
+      key: 'codepunch',
+      debug: true
+    });
+
     peer.on('open', function(){
       $('#my-id').text(peer.id);
     });

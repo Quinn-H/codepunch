@@ -8,6 +8,6 @@ module.exports = {
       pass: 'codepunch'
     }
   },
-  dbConnstring: 'mongodb://127.0.0.1:27017/codepunch',
+  dbConnstring: 'mongodb://admin:admin@ds127962.mlab.com:27962/codepunch',
   sessionKey: 'helloworld'
 }
